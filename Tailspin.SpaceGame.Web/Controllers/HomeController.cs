@@ -11,6 +11,7 @@ namespace TailSpin.SpaceGame.Web.Controllers
     public class HomeController : Controller
     {
         //some commits
+        //some other commits
         // High score repository.
         private readonly IDocumentDBRepository<Score> _scoreRepository;
         // User profile repository.
