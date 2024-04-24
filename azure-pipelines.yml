@@ -1,3 +1,14 @@
-pool: MyAgentPool
+trigger:
+  branches:
+    include:
+      - main  # Adjust branch name as needed
+
+pool:
+  vmImage: 'ubuntu-latest'
+
 steps:
-- bash: echo hello world
+- script: | 
+    git add .
+    git commit -m "Update files"
+    git push origin main  # Adjust branch name as needed
+  displayName: 'Push changes to GitHub'
